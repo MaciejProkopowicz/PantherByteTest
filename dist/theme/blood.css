@@ -149,13 +149,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
   font-style: italic;
 }
 
-.reveal ol,
+/* .reveal ol,
 .reveal dl,
 .reveal ul {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em;
-}
+} */
 
 .reveal ol {
   list-style-type: decimal;
@@ -413,7 +413,14 @@ section.has-light-background p, section.has-light-background h1, section.has-lig
   color: rgb(255, 255, 255);
 }
 
+.glowMe2{
+  color: rgb(124, 2, 69);
+  animation: glowingText 3s infinite alternate;
+}
 
+.glowMe2:hover{
+  color: rgb(255, 255, 255);
+}
 
 /* Under layer */
 
@@ -646,6 +653,7 @@ animation: imgglow 2s ease-in-out infinite alternate;
 
 .app-form-group.message {
   margin-top: 40px;
+  font-size: 14px;
 }
 
 .app-form-group.buttons {
@@ -679,7 +687,7 @@ animation: imgglow 2s ease-in-out infinite alternate;
   background: none;
   border: none;
   color: #ea1d1dc5;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   outline: none;
 }
@@ -722,4 +730,29 @@ animation: imgglow 2s ease-in-out infinite alternate;
 
 .vjs-control-bar{
   border-radius: 10px;
+}
+
+.gliderBtn{
+  z-index: 10;
+}
+
+.gliderBtn:hover{
+  z-index: 10;
+  color: orange;
+}
+
+#myUl{
+ 		 
+  display: flex;
+  text-align: center;
+  margin: 0 0 0 0;
+  list-style-type: none; 
+  justify-content: center;
+  align-items: center;
+			  
+}
+
+.glide__slide{
+  text-align: center;
+  margin: auto;
 }
