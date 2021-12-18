@@ -438,17 +438,31 @@ section.has-light-background p, section.has-light-background h1, section.has-lig
 @media screen and (max-width: 1000px) {
   .underTab{
     position: relative;
-    left: 14px;
+    left: 8px;
   }
+}
+
+.menuText{
+  position: fixed;
+  left: 21%;
+  top: 500px;
+  font-size: 1.5rem; margin-right: 20px;
 }
 
 @media screen and (max-width: 780px) {
   .underTab{
     position: relative;
-    left: 18px;
-    width: 100%;
+    
+    
   }
+
+  .menuText{
+    top: 700px;
+  }
+
 }
+
+
 
 /* Menu Slide */
 
