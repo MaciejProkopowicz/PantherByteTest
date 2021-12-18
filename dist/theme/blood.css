@@ -19,7 +19,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 :root {
   --r-background-color: #222;
-  --r-main-font: Ubuntu, sans-serif;
+  --r-main-font: 'Orbitron', Ubuntu, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #eee;
   --r-block-margin: 20px;
@@ -50,7 +50,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal {
-  font-family: var(--r-main-font);
+  font-family: 'Orbitron', var(--r-main-font);
   font-size: var(--r-main-font-size);
   font-weight: normal;
   color: var(--r-main-color);
@@ -85,7 +85,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal h6 {
   margin: var(--r-heading-margin);
   color: var(--r-heading-color);
-  font-family: var(--r-heading-font);
+  font-family: 'Orbitron',var(--r-heading-font);
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
@@ -133,12 +133,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
+/* .reveal img,
 .reveal video,
 .reveal iframe {
   max-width: 95%;
   max-height: 95%;
-}
+} */
 
 .reveal strong,
 .reveal b {
@@ -216,7 +216,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   margin: var(--r-block-margin) auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: var(--r-code-font);
+  font-family: 'Orbitron',var(--r-code-font);
   line-height: 1.2em;
   word-wrap: break-word;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
@@ -387,4 +387,339 @@ section.has-light-background p, section.has-light-background h1, section.has-lig
 
 .reveal small code {
   vertical-align: baseline;
+}
+
+/* Intro Button */
+
+.glowMe{
+  color: rgb(71, 2, 2);
+  animation: glowingText 3s infinite alternate;
+}
+
+.glowMe:hover{
+  color: rgb(255, 255, 255);
+}
+
+.glowMe1{
+  position: relative;
+	top: 11px;
+  color: rgba(196, 0, 0, 0.82);
+  filter:drop-shadow(0 0 5px rgb(255, 0, 0), 0 0 10px #ff3c00, 0 0 20px #f81414);
+
+  /* animation: glowingBox 3s infinite alternate; */
+}
+
+.glowMe1:hover{
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* Under layer */
+
+.underTab{
+  background-color: rgba(0, 0, 0, 0.342);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.507);
+  border-width: 2px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+
+}
+
+@media screen and (max-width: 1000px) {
+  .underTab{
+    position: relative;
+    left: 14px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .underTab{
+    position: relative;
+    left: 18px;
+    width: 100%;
+  }
+}
+
+/* Menu Slide */
+
+
+.imgHover{
+  margin: 0 0 50px 0;
+/* background-color: black; */
+animation: imgglow 2s ease-in-out infinite alternate;
+
+}
+
+.imgHover:hover{
+  animation: imgglowafter 1s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes imgglow {
+    from {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.541));
+  }
+  to {
+      filter: drop-shadow( 0 0 15px rgba(250, 0, 75, 0.432))drop-shadow( 0 0 20px rgba(255, 38, 0, 0.568));
+  }
+}
+
+@keyframes imgglowafter {
+    from {
+      filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.541));
+  }
+  to {
+      filter: drop-shadow( 0 0 15px rgba(0, 247, 255, 0.432))drop-shadow( 0 0 20px rgba(0, 255, 0, 0.685));
+  }
+}
+  
+
+
+
+#menuDev{
+ color: rgba(3, 250, 3, 0.616);
+}
+#menuDesign{
+  color: rgb(204, 0, 255);
+ }
+#menuProd{
+  color: rgb(255, 217, 0);
+ }
+#menuContact{
+  color: rgb(0, 110, 255);
+ }
+
+#menuDev:hover{
+  color: white;
+  animation: glowingText 1s infinite alternate;
+
+  
+}
+
+#menuDesign:hover{
+  color: white;
+  animation: glowingText 1s infinite alternate;
+
+}
+#menuProd:hover{
+  color: white;
+  animation: glowingText 1s infinite alternate;
+
+}
+#menuContact:hover{
+  color: white;
+  animation: glowingText 1s infinite alternate;
+
+}
+
+
+
+
+/* Form */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+
+.screen {
+  position: relative;
+  background: rgba(0, 0, 0, 0.418);
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 15px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #0c0c0cb7;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #ff0000a4;
+}
+
+.screen-body {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ff00009c;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #ff00009d;
+}
+
+.app-contact {
+  text-align: left;
+  margin-top: auto;
+  font-size: 10px;
+  color: rgb(175, 175, 175);
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  font-family: 'Orbitron', sans-serif;
+  background: none;
+  border: none;
+  color: #ea1d1dc5;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #f05555;
+  animation: glowingText 1s ease-in-out infinite alternate
+}
+
+/* end form */
+
+
+/* Animations */
+@keyframes glowingText {
+  from {
+    text-shadow: 0 0 0px rgb(248, 69, 69), 0 0 0px rgb(253, 102, 102), 0 0 0px rgb(245, 179, 179);
+  }
+  to {
+    text-shadow: 0 0 5px rgb(255, 65, 65), 0 0 10px #ff6334, 0 0 20px #f85151;
+  }
+}
+
+@keyframes glowingBox {
+  from {
+    backdrop-filter:drop-shadow(0 0 0px rgb(248, 69, 69), 0 0 0px rgb(253, 102, 102), 0 0 0px rgb(245, 179, 179));
+  }
+  to {
+    backdrop-filter:drop-shadow(0 0 5px rgb(255, 0, 0), 0 0 10px #ff3c00, 0 0 20px #f81414);
+  }
+}
+
+
+
+/* video player adjustment */
+
+.video-js .vjs-big-play-button{
+  top: 100px;
+    left: 219px;
+}
+
+.vjs-control-bar{
+  border-radius: 10px;
 }
